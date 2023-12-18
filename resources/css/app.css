@@ -1,0 +1,25 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
+.bg-image {
+    background-image: url("https://rawoffice.com/images/new_homepage/hero_2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-container {
+    width: 80%;
+}
+
+#options-footer {
+    background-color: white;
+    text-align: left;
+}
+
+#submit-button {
+    margin-top: 10px;
+}
