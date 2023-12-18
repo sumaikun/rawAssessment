@@ -54,7 +54,7 @@ const MainView: React.FC = () => {
   const getUsers = useCallback((currentPage: number) => {
     // @ts-expect-error
     window.axios
-      .get(`/api/users?page=${currentPage}`)
+      .get(`/api/front/users?page=${currentPage}`)
       .then((response: AxiosUserResponse) => {
         // eslint-disable-next-line @typescript-eslint/naming-convention
         const { data, current_page, last_page } = response.data;
@@ -79,7 +79,7 @@ const MainView: React.FC = () => {
   const handleDeleteUser = useCallback((user: User) => {
     if (confirm('Are you sure you want to delete this user?')) {
       // @ts-expect-error
-      window.axios.delete(`/api/users/${user.id}`)
+      window.axios.delete(`/api/front/users/${user.id}`)
         .then(() => {
           alert('User deleted successfully');
           getUsers(page);

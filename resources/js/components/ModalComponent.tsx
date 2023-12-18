@@ -38,7 +38,7 @@ const ModalComponent: React.FC<ModalProps> = ({ show, handleClose, user, onHandl
 
     if (user) {
       // @ts-expect-error
-      window.axios.put(`/api/users/${user.id}`, formData)
+      window.axios.put(`/api/front/users/${user.id}`, formData)
         .then(() => {
           alert('data updated successfully');
           onHandleUpdate();
@@ -49,7 +49,7 @@ const ModalComponent: React.FC<ModalProps> = ({ show, handleClose, user, onHandl
         });
     } else {
       // @ts-expect-error
-      window.axios.post('/api/users', formData)
+      window.axios.post('/api/front/users', formData)
         .then(() => {
           alert('data created successfully');
           onHandleUpdate();
